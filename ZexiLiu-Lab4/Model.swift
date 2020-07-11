@@ -10,8 +10,12 @@ import Foundation
 
 class Model {
     //fetch movies from TMDB
+    var apiResults: APIResults?
     func getMovies() {
-        let url = URL(string: Constants.URL)
+        let apiKey: String = "3cad51d50ec5ff7b806eb0306fa1410b"
+        let str = "https://api.themoviedb.org/3/search/movie?api_key=\(apiKey)&query=love"
+        
+        let url = URL(string: str)
         guard url != nil else {
             return
         }
@@ -23,8 +27,19 @@ class Model {
             if (error != nil || data == nil) {
                 return
             }
-            print(data!)
+            
+            do {
+                let decoder = JSONDecoder()
+                
+                let response = try decoder.decode(APIResults.self, from: data!)
+                dump(response)
+            } catch {
+                
+            }
+            
         }
+        
+        
         
         dataTask.resume()
     }
