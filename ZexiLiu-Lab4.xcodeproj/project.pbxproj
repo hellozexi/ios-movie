@@ -15,6 +15,10 @@
 		828FCFF624B7CD4D000D80C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 828FCFF424B7CD4D000D80C4 /* LaunchScreen.storyboard */; };
 		828FD00124B7CD4D000D80C4 /* ZexiLiu_Lab4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828FD00024B7CD4D000D80C4 /* ZexiLiu_Lab4Tests.swift */; };
 		828FD00C24B7CD4D000D80C4 /* ZexiLiu_Lab4UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828FD00B24B7CD4D000D80C4 /* ZexiLiu_Lab4UITests.swift */; };
+		828FD01A24B7CF3C000D80C4 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828FD01924B7CF3C000D80C4 /* Model.swift */; };
+		828FD01C24B7CFFB000D80C4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828FD01B24B7CFFB000D80C4 /* Constants.swift */; };
+		828FD01E24B93E65000D80C4 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828FD01D24B93E65000D80C4 /* Movie.swift */; };
+		828FD02024B93E7E000D80C4 /* APIResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828FD01F24B93E7E000D80C4 /* APIResults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		828FD00724B7CD4D000D80C4 /* ZexiLiu-Lab4UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ZexiLiu-Lab4UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		828FD00B24B7CD4D000D80C4 /* ZexiLiu_Lab4UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZexiLiu_Lab4UITests.swift; sourceTree = "<group>"; };
 		828FD00D24B7CD4D000D80C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		828FD01924B7CF3C000D80C4 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		828FD01B24B7CFFB000D80C4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		828FD01D24B93E65000D80C4 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		828FD01F24B93E7E000D80C4 /* APIResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +114,10 @@
 				828FCFF224B7CD4D000D80C4 /* Assets.xcassets */,
 				828FCFF424B7CD4D000D80C4 /* LaunchScreen.storyboard */,
 				828FCFF724B7CD4D000D80C4 /* Info.plist */,
+				828FD01924B7CF3C000D80C4 /* Model.swift */,
+				828FD01B24B7CFFB000D80C4 /* Constants.swift */,
+				828FD01D24B93E65000D80C4 /* Movie.swift */,
+				828FD01F24B93E7E000D80C4 /* APIResults.swift */,
 			);
 			path = "ZexiLiu-Lab4";
 			sourceTree = "<group>";
@@ -259,9 +271,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				828FD01C24B7CFFB000D80C4 /* Constants.swift in Sources */,
 				828FCFEE24B7CD4B000D80C4 /* ViewController.swift in Sources */,
+				828FD01E24B93E65000D80C4 /* Movie.swift in Sources */,
 				828FCFEA24B7CD4B000D80C4 /* AppDelegate.swift in Sources */,
 				828FCFEC24B7CD4B000D80C4 /* SceneDelegate.swift in Sources */,
+				828FD02024B93E7E000D80C4 /* APIResults.swift in Sources */,
+				828FD01A24B7CF3C000D80C4 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
