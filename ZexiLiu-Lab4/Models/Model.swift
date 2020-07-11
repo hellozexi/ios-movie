@@ -8,9 +8,16 @@
 
 import Foundation
 
+protocol ModelDelegate {
+    func moviesFetched(_ movies: [Movie])
+}
+
+
 class Model {
     //fetch movies from TMDB
-    var apiResults: APIResults?
+    var delegate: ModelDelegate?
+    
+    //var apiResults: APIResults?
     func getMovies() {
         let apiKey: String = "3cad51d50ec5ff7b806eb0306fa1410b"
         let str = "https://api.themoviedb.org/3/search/movie?api_key=\(apiKey)&query=love"
@@ -32,6 +39,10 @@ class Model {
                 let decoder = JSONDecoder()
                 
                 let response = try decoder.decode(APIResults.self, from: data!)
+                if(response.results != nil) {
+                    self.delegate?.moviesFetched(response.results)
+                }
+                
                 dump(response)
             } catch {
                 

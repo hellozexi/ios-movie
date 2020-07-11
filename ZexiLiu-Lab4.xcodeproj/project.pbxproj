@@ -107,17 +107,15 @@
 		828FCFE824B7CD4B000D80C4 /* ZexiLiu-Lab4 */ = {
 			isa = PBXGroup;
 			children = (
+				828FD02624BA770D000D80C4 /* Controllers */,
+				828FD02524BA76D2000D80C4 /* Utils */,
+				828FD02424BA76C3000D80C4 /* StoryBoards */,
+				828FD02324BA76B4000D80C4 /* Models */,
+				828FD02224BA76A1000D80C4 /* Views */,
 				828FCFE924B7CD4B000D80C4 /* AppDelegate.swift */,
 				828FCFEB24B7CD4B000D80C4 /* SceneDelegate.swift */,
-				828FCFED24B7CD4B000D80C4 /* ViewController.swift */,
-				828FCFEF24B7CD4B000D80C4 /* Main.storyboard */,
 				828FCFF224B7CD4D000D80C4 /* Assets.xcassets */,
-				828FCFF424B7CD4D000D80C4 /* LaunchScreen.storyboard */,
 				828FCFF724B7CD4D000D80C4 /* Info.plist */,
-				828FD01924B7CF3C000D80C4 /* Model.swift */,
-				828FD01B24B7CFFB000D80C4 /* Constants.swift */,
-				828FD01D24B93E65000D80C4 /* Movie.swift */,
-				828FD01F24B93E7E000D80C4 /* APIResults.swift */,
 			);
 			path = "ZexiLiu-Lab4";
 			sourceTree = "<group>";
@@ -138,6 +136,48 @@
 				828FD00D24B7CD4D000D80C4 /* Info.plist */,
 			);
 			path = "ZexiLiu-Lab4UITests";
+			sourceTree = "<group>";
+		};
+		828FD02224BA76A1000D80C4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		828FD02324BA76B4000D80C4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				828FD01924B7CF3C000D80C4 /* Model.swift */,
+				828FD01D24B93E65000D80C4 /* Movie.swift */,
+				828FD01F24B93E7E000D80C4 /* APIResults.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		828FD02424BA76C3000D80C4 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				828FCFEF24B7CD4B000D80C4 /* Main.storyboard */,
+				828FCFF424B7CD4D000D80C4 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		828FD02524BA76D2000D80C4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				828FD01B24B7CFFB000D80C4 /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		828FD02624BA770D000D80C4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				828FCFED24B7CD4B000D80C4 /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
