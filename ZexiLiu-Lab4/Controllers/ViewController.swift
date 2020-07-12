@@ -9,12 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, ModelDelegate {
+    
+    
    
     
 
     @IBOutlet weak var moviesCollection: UICollectionView!
     var model = Model()
     var movies = [Movie]()
+    var images = [UIImage]()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -23,26 +26,39 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         model.delegate = self
         model.getMovies()
         
+        
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return movies.count
        }
        
    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = moviesCollection.dequeueReusableCell(withReuseIdentifier: "movieCell", for: indexPath)
-    
-    let title = self.movies[indexPath.row].title
-    //cell.textLabel?.title = title
-    print(title)
-    return cell
+       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "movieCell", for: indexPath) as! MovieViewCell
+       
+       // Configure the cell with the data
+        //dump(indexPath)
+    if(indexPath.item < images.count) {
+        cell.setImage(images[indexPath[1]])
+    }
+    let movie = self.movies[indexPath.item]
+       
+       cell.setMovie(movie)
+       // Return the cell
+       return cell
+       
    }
+    
+    
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
     }
     
-    func moviesFetched(_ movies: [Movie]) {
+    func moviesFetched(_ movies: [Movie], _ images: [UIImage]) {
         self.movies = movies
+        self.images = images
+        moviesCollection.reloadData()
+        //self.cacheImage()
     }
 }
 

@@ -7,15 +7,19 @@
 //
 
 import Foundation
-
+import UIKit
 protocol ModelDelegate {
-    func moviesFetched(_ movies: [Movie])
+    func moviesFetched(_ movies: [Movie], _ images: [UIImage])
 }
 
 
 class Model {
     //fetch movies from TMDB
     var delegate: ModelDelegate?
+    
+    func getImgPath(_ url: String) -> String {
+        return "https://image.tmdb.org/t/p/w200\(url)"
+    }
     
     //var apiResults: APIResults?
     func getMovies() {
@@ -37,21 +41,42 @@ class Model {
             
             do {
                 let decoder = JSONDecoder()
-                
                 let response = try decoder.decode(APIResults.self, from: data!)
-                if(response.results != nil) {
-                    self.delegate?.moviesFetched(response.results)
-                }
                 
-                dump(response)
+                
+                let images = self.cacheImage(response.results)
+                
+                DispatchQueue.main.async {
+                    self.delegate?.moviesFetched(response.results, images)
+                
+                }
+                    
             } catch {
                 
             }
             
         }
         
-        
-        
         dataTask.resume()
+    }
+    
+    
+    func cacheImage(_ movies: [Movie]) -> [UIImage] {
+        var images: [UIImage] = []
+        var count: Int = 0
+        while(count <= 20) {
+            if(count > movies.count - 1) {
+                break
+            }
+            if let imagePath = movies[count].poster_path {
+                let imageFullPath = self.getImgPath(imagePath)
+                guard let imageUrl = URL(string: imageFullPath) else { return images }
+                guard let data = try? Data(contentsOf: imageUrl) else { return images }
+                guard let image = UIImage(data: data) else { return images }
+                images.append(image)
+            }
+            count += 1
+        }
+        return images
     }
 }
