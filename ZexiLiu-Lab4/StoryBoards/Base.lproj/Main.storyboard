@@ -63,6 +63,7 @@
                                         <connections>
                                             <outlet property="posterImage" destination="Rm7-sr-gTM" id="Avy-bF-bC1"/>
                                             <outlet property="titel" destination="4rr-hf-5Vy" id="s3v-RE-5Yi"/>
+                                            <segue destination="mjh-8i-jTb" kind="show" id="2ov-vZ-J7q"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -87,6 +88,81 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="4QU-av-dtt">
+            <objects>
+                <viewController id="mjh-8i-jTb" customClass="DetailViewController" customModule="ZexiLiu_Lab4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZQG-pw-B3x" customClass="Detail">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Kzq-66-7B5">
+                                <rect key="frame" x="0.0" y="30" width="414" height="778"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1HB-Xa-Q01">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="BUU-hz-Oc1"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qy6-YX-Hn1">
+                                        <rect key="frame" x="0.0" y="40" width="414" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lgy-2Q-KpL">
+                                        <rect key="frame" x="0.0" y="70.5" width="414" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="JWU-rV-RbH"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PRC-L2-169">
+                                        <rect key="frame" x="0.0" y="110.5" width="414" height="500"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="500" id="ITS-hv-rKa"/>
+                                            <constraint firstAttribute="width" secondItem="PRC-L2-169" secondAttribute="height" multiplier="150:250" id="w1j-cK-DV1"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tGK-Hi-CON">
+                                        <rect key="frame" x="0.0" y="620.5" width="414" height="157.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="RTL-L4-3xZ" firstAttribute="trailing" secondItem="Kzq-66-7B5" secondAttribute="trailing" id="iV0-d6-kip"/>
+                            <constraint firstItem="Kzq-66-7B5" firstAttribute="top" secondItem="RTL-L4-3xZ" secondAttribute="top" constant="30" id="lxo-aG-i47"/>
+                            <constraint firstItem="Kzq-66-7B5" firstAttribute="leading" secondItem="RTL-L4-3xZ" secondAttribute="leading" id="qXz-tM-SNj"/>
+                            <constraint firstItem="RTL-L4-3xZ" firstAttribute="bottom" secondItem="Kzq-66-7B5" secondAttribute="bottom" id="rVx-kj-y2v"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RTL-L4-3xZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="sOs-sV-a0B"/>
+                    <connections>
+                        <outlet property="overviewText" destination="tGK-Hi-CON" id="CTH-Yi-aVg"/>
+                        <outlet property="posterImage" destination="PRC-L2-169" id="dYo-bc-Vxh"/>
+                        <outlet property="releaseDateLabel" destination="Lgy-2Q-KpL" id="JxQ-MH-RiZ"/>
+                        <outlet property="titleLabel" destination="1HB-Xa-Q01" id="Eta-5V-cCm"/>
+                        <outlet property="voteAvgLabel" destination="qy6-YX-Hn1" id="pb9-hr-GRi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VKs-Ye-Pqz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="844.92753623188412" y="135.9375"/>
         </scene>
     </scenes>
 </document>
