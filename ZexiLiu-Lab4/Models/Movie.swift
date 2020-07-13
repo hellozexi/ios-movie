@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Movie: Decodable {
+struct Movie: Decodable, Encodable {
     let id: Int!
     let poster_path: String?
     let title: String

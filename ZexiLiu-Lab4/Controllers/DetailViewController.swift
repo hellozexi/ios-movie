@@ -54,17 +54,22 @@ class DetailViewController: UIViewController {
             posterImage.image = image
             
         }
-        
-        let favoriteMovies = defaults.object(forKey: "favorites") as? [Int] ?? [Int]()
-        
-        if(favoriteMovies.count > 0) {
-            for movieId in favoriteMovies {
-                if(self.movie?.id == movieId) {
-                    //the movie is already in favorite list
-                    isFavorite = true
+        //let favoriteMovies: [Movie] = [Movie]()
+    
+        if let data = UserDefaults.standard.value(forKey:"favorites") as? Data {
+            let favoriteMovies = try! PropertyListDecoder().decode(Array<Movie>.self, from: data)
+            if(favoriteMovies.count > 0) {
+                for movie in favoriteMovies {
+                    if(self.movie?.id == movie.id) {
+                        //the movie is already in favorite list
+                        isFavorite = true
+                    }
                 }
             }
         }
+        
+        
+        
         
         favoriteButton.setTitle(getFavoriteBtnTitle(self.isFavorite), for: .normal)
         overviewText.text = movie?.overview
@@ -73,19 +78,27 @@ class DetailViewController: UIViewController {
     
     
     @IBAction func favoriteBtnClicked(_ sender: Any) {
-        var favoriteMovies = defaults.object(forKey: "favorites") as? [Int] ?? [Int]()
+        var favoriteMovies = [Movie]()
+        if let data = UserDefaults.standard.value(forKey:"favorites") as? Data {
+            favoriteMovies = try! PropertyListDecoder().decode(Array<Movie>.self, from: data)
+            
+        }
+        
         if(self.isFavorite) {
             for i in 0...favoriteMovies.count - 1 {
-                if(favoriteMovies[i] == self.movie?.id) {
+                if(favoriteMovies[i].id == self.movie?.id) {
                     favoriteMovies.remove(at: i)
-                    defaults.set(favoriteMovies, forKey: "favorites")
+//                        defaults.set(favoriteMovies, forKey: "favorites")
+                    UserDefaults.standard.set(try? PropertyListEncoder().encode(favoriteMovies), forKey:"favorites")
                     break
                 }
             }
         } else {
-            favoriteMovies.append((self.movie?.id)!)
-            defaults.set(favoriteMovies, forKey: "favorites")
+            favoriteMovies.append(self.movie!)
+            //defaults.set(favoriteMovies, forKey: "favorites")
+            UserDefaults.standard.set(try? PropertyListEncoder().encode(favoriteMovies), forKey:"favorites")
         }
+        
         
         self.isFavorite = !self.isFavorite
         favoriteButton.setTitle(getFavoriteBtnTitle(self.isFavorite), for: .normal)
@@ -99,14 +112,6 @@ class DetailViewController: UIViewController {
         }
         
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+   
 
 }
