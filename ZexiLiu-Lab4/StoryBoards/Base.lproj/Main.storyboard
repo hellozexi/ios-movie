@@ -125,23 +125,28 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PRC-L2-169">
-                                        <rect key="frame" x="0.0" y="110.5" width="414" height="500"/>
+                                        <rect key="frame" x="0.0" y="110.5" width="414" height="368"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="500" id="ITS-hv-rKa"/>
-                                            <constraint firstAttribute="width" secondItem="PRC-L2-169" secondAttribute="height" multiplier="150:250" id="w1j-cK-DV1"/>
+                                            <constraint firstAttribute="height" constant="368" id="jWF-yy-EG4"/>
                                         </constraints>
                                     </imageView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tGK-Hi-CON">
-                                        <rect key="frame" x="0.0" y="620.5" width="414" height="117.5"/>
+                                        <rect key="frame" x="0.0" y="488.5" width="414" height="178"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="178" id="leX-cR-TuJ"/>
+                                        </constraints>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yFO-vP-mmm">
-                                        <rect key="frame" x="0.0" y="748" width="414" height="30"/>
-                                        <state key="normal" title="Button"/>
+                                        <rect key="frame" x="0.0" y="676.5" width="414" height="101.5"/>
+                                        <state key="normal" title="add to favorite movies"/>
+                                        <connections>
+                                            <action selector="favoriteBtnClicked:" destination="mjh-8i-jTb" eventType="touchUpInside" id="lFU-FE-0gy"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

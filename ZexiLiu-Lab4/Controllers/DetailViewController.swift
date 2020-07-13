@@ -17,7 +17,13 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var overviewText: UITextView!
     @IBOutlet weak var favoriteButton: UIButton!
     
+    var isFavorite: Bool = false
+    
     var model = Model()
+    
+    //init local storage
+    let defaults = UserDefaults.standard
+    
     
     var movie: Movie?
     override func viewDidLoad() {
@@ -49,7 +55,49 @@ class DetailViewController: UIViewController {
             
         }
         
+        let favoriteMovies = defaults.object(forKey: "favorites") as? [Int] ?? [Int]()
+        
+        if(favoriteMovies.count > 0) {
+            for movieId in favoriteMovies {
+                if(self.movie?.id == movieId) {
+                    //the movie is already in favorite list
+                    isFavorite = true
+                }
+            }
+        }
+        
+        favoriteButton.setTitle(getFavoriteBtnTitle(self.isFavorite), for: .normal)
         overviewText.text = movie?.overview
+    }
+    
+    
+    
+    @IBAction func favoriteBtnClicked(_ sender: Any) {
+        var favoriteMovies = defaults.object(forKey: "favorites") as? [Int] ?? [Int]()
+        if(self.isFavorite) {
+            for i in 0...favoriteMovies.count - 1 {
+                if(favoriteMovies[i] == self.movie?.id) {
+                    favoriteMovies.remove(at: i)
+                    defaults.set(favoriteMovies, forKey: "favorites")
+                    break
+                }
+            }
+        } else {
+            favoriteMovies.append((self.movie?.id)!)
+            defaults.set(favoriteMovies, forKey: "favorites")
+        }
+        
+        self.isFavorite = !self.isFavorite
+        favoriteButton.setTitle(getFavoriteBtnTitle(self.isFavorite), for: .normal)
+    }
+    
+    func getFavoriteBtnTitle(_ isFavorite: Bool) -> String {
+        if(isFavorite) {
+            return "delete from favorite"
+        } else {
+            return "add to favorite movies"
+        }
+        
     }
     /*
     // MARK: - Navigation
