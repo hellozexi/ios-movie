@@ -22,6 +22,7 @@
 		82BCB6A024BA8029002E765B /* MovieViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BCB69F24BA8029002E765B /* MovieViewCell.swift */; };
 		82BCB6A224BAB4C1002E765B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BCB6A124BAB4C1002E765B /* DetailViewController.swift */; };
 		82BCB6A424BCEDC5002E765B /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BCB6A324BCEDC5002E765B /* FavoriteViewController.swift */; };
+		82BCB6A624BCFD16002E765B /* FavoriteMovieViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BCB6A524BCFD16002E765B /* FavoriteMovieViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		82BCB69F24BA8029002E765B /* MovieViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewCell.swift; sourceTree = "<group>"; };
 		82BCB6A124BAB4C1002E765B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		82BCB6A324BCEDC5002E765B /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		82BCB6A524BCFD16002E765B /* FavoriteMovieViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMovieViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				82BCB69F24BA8029002E765B /* MovieViewCell.swift */,
+				82BCB6A524BCFD16002E765B /* FavoriteMovieViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82BCB6A224BAB4C1002E765B /* DetailViewController.swift in Sources */,
+				82BCB6A624BCFD16002E765B /* FavoriteMovieViewCell.swift in Sources */,
 				828FD01C24B7CFFB000D80C4 /* Constants.swift in Sources */,
 				82BCB6A024BA8029002E765B /* MovieViewCell.swift in Sources */,
 				828FCFEE24B7CD4B000D80C4 /* ViewController.swift in Sources */,

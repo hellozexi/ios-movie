@@ -187,6 +187,52 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hU7-ZH-Wp8">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="favoriteMovieCell" rowHeight="129" id="0SX-sm-AZ2" customClass="FavoriteMovieViewCell" customModule="ZexiLiu_Lab4" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="129"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0SX-sm-AZ2" id="XEC-Fs-gA4">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="129"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2MJ-Vz-pzW">
+                                                    <rect key="frame" x="0.0" y="0.0" width="108" height="129"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="108" id="7YY-F1-e54"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="748" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tol-Tr-7hR">
+                                                    <rect key="frame" x="118" y="21" width="64" height="87"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EjB-jL-3sv">
+                                                    <rect key="frame" x="192" y="21" width="212" height="87"/>
+                                                    <state key="normal" title="Delete">
+                                                        <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="2MJ-Vz-pzW" secondAttribute="bottom" id="BmV-8U-jQK"/>
+                                                <constraint firstItem="EjB-jL-3sv" firstAttribute="trailing" secondItem="XEC-Fs-gA4" secondAttribute="trailingMargin" constant="10" id="G6I-yb-UbM"/>
+                                                <constraint firstItem="tol-Tr-7hR" firstAttribute="top" secondItem="XEC-Fs-gA4" secondAttribute="topMargin" constant="10" id="Gu9-Os-OY7"/>
+                                                <constraint firstItem="EjB-jL-3sv" firstAttribute="leading" secondItem="tol-Tr-7hR" secondAttribute="trailing" constant="10" id="PXr-2M-3by"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="EjB-jL-3sv" secondAttribute="bottom" constant="10" id="Ww1-bZ-IUP"/>
+                                                <constraint firstItem="2MJ-Vz-pzW" firstAttribute="leading" secondItem="XEC-Fs-gA4" secondAttribute="leading" id="ayu-ya-VgF"/>
+                                                <constraint firstItem="2MJ-Vz-pzW" firstAttribute="top" secondItem="XEC-Fs-gA4" secondAttribute="top" id="cLV-g3-noy"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="tol-Tr-7hR" secondAttribute="bottom" constant="10" id="gqy-LL-oF1"/>
+                                                <constraint firstItem="tol-Tr-7hR" firstAttribute="leading" secondItem="2MJ-Vz-pzW" secondAttribute="trailing" constant="10" id="sGM-H9-3gX"/>
+                                                <constraint firstItem="EjB-jL-3sv" firstAttribute="top" secondItem="XEC-Fs-gA4" secondAttribute="topMargin" constant="10" id="yPE-Tz-mwP"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="movieImage" destination="2MJ-Vz-pzW" id="Ka5-4X-6h3"/>
+                                            <outlet property="movieTitle" destination="tol-Tr-7hR" id="RFD-mv-Gfa"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -199,10 +245,13 @@
                         <viewLayoutGuide key="safeArea" id="Eyv-Do-nhb"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="favotites" image="star" catalog="system" id="KI0-RJ-8I5"/>
+                    <connections>
+                        <outlet property="tableView" destination="hU7-ZH-Wp8" id="mYF-Qh-XjP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RGa-6p-n4W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="913" y="559"/>
+            <point key="canvasLocation" x="911.59420289855075" y="557.8125"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="WMD-y0-CgZ">
@@ -210,6 +259,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="LuX-vr-V3y" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xqo-W2-mhU">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
