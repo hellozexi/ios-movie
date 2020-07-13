@@ -36,6 +36,16 @@ class FavoriteViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
 
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == UITableViewCell.EditingStyle.delete) {
+            // handle delete (by removing the data from your array and updating the tableview)
+            favoriteMovies.remove(at: indexPath.row)
+            images = self.model.cacheImage(self.favoriteMovies)
+            UserDefaults.standard.set(try? PropertyListEncoder().encode(favoriteMovies), forKey:"favorites")
+            self.tableView.reloadData()
+        }
+    }
+    
     override func viewDidLoad() {
         
     }
@@ -46,9 +56,9 @@ class FavoriteViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.dataSource = self
         self.getFavoriteMovies()
         images = self.model.cacheImage(self.favoriteMovies)
-        DispatchQueue.main.async{
+        //DispatchQueue.main.async{
             self.tableView.reloadData()
-        }
+        //}
 
     }
     
