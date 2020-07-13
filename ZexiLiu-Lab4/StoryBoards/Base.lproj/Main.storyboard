@@ -202,30 +202,21 @@
                                                         <constraint firstAttribute="width" constant="108" id="7YY-F1-e54"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="748" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tol-Tr-7hR">
-                                                    <rect key="frame" x="118" y="21" width="64" height="87"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="748" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tol-Tr-7hR">
+                                                    <rect key="frame" x="118" y="21" width="276" height="87"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EjB-jL-3sv">
-                                                    <rect key="frame" x="192" y="21" width="212" height="87"/>
-                                                    <state key="normal" title="Delete">
-                                                        <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </state>
-                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="2MJ-Vz-pzW" secondAttribute="bottom" id="BmV-8U-jQK"/>
-                                                <constraint firstItem="EjB-jL-3sv" firstAttribute="trailing" secondItem="XEC-Fs-gA4" secondAttribute="trailingMargin" constant="10" id="G6I-yb-UbM"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="tol-Tr-7hR" secondAttribute="trailing" id="DAC-Yh-m2p"/>
                                                 <constraint firstItem="tol-Tr-7hR" firstAttribute="top" secondItem="XEC-Fs-gA4" secondAttribute="topMargin" constant="10" id="Gu9-Os-OY7"/>
-                                                <constraint firstItem="EjB-jL-3sv" firstAttribute="leading" secondItem="tol-Tr-7hR" secondAttribute="trailing" constant="10" id="PXr-2M-3by"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="EjB-jL-3sv" secondAttribute="bottom" constant="10" id="Ww1-bZ-IUP"/>
                                                 <constraint firstItem="2MJ-Vz-pzW" firstAttribute="leading" secondItem="XEC-Fs-gA4" secondAttribute="leading" id="ayu-ya-VgF"/>
                                                 <constraint firstItem="2MJ-Vz-pzW" firstAttribute="top" secondItem="XEC-Fs-gA4" secondAttribute="top" id="cLV-g3-noy"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="tol-Tr-7hR" secondAttribute="bottom" constant="10" id="gqy-LL-oF1"/>
                                                 <constraint firstItem="tol-Tr-7hR" firstAttribute="leading" secondItem="2MJ-Vz-pzW" secondAttribute="trailing" constant="10" id="sGM-H9-3gX"/>
-                                                <constraint firstItem="EjB-jL-3sv" firstAttribute="top" secondItem="XEC-Fs-gA4" secondAttribute="topMargin" constant="10" id="yPE-Tz-mwP"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
