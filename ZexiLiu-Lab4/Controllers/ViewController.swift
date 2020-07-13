@@ -48,7 +48,18 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
        
    }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let indexes = moviesCollection.indexPathsForSelectedItems {
+            let selectedMovie = movies[indexes[0].row]
+            let detailVC = segue.destination as! DetailViewController
+            detailVC.movie = selectedMovie
+        } else {
+            return
+        }
+        
+        
+        
+    }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
