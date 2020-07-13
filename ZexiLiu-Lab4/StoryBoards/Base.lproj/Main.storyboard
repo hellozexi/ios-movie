@@ -85,6 +85,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="moviesCollection" destination="udF-40-wNH" id="Hyv-Na-VKT"/>
+                        <outlet property="searchBar" destination="sdl-8J-hNu" id="XCu-ww-SZf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

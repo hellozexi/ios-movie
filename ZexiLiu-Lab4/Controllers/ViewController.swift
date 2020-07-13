@@ -8,10 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, ModelDelegate {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UISearchBarDelegate, ModelDelegate {
     
     
-   
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     
 
     @IBOutlet weak var moviesCollection: UICollectionView!
@@ -23,8 +24,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // Do any additional setup after loading the view.
         moviesCollection.delegate = self
         moviesCollection.dataSource = self
+        searchBar.delegate = self
         model.delegate = self
-        model.getMovies()
+        model.getMovies("love")
         
         
     }
@@ -60,6 +62,18 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         
     }
+    
+    
+    //search bar delegate
+    func searchBar(_ searchBar: UISearchBar, textDidChange: String){
+        // clean current list
+        // pull data from API
+        if (textDidChange != ""){
+            model.getMovies(textDidChange)
+        }
+    }
+    
+    
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         

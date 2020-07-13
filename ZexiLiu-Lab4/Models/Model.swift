@@ -22,9 +22,9 @@ class Model {
     }
     
     //var apiResults: APIResults?
-    func getMovies() {
+    func getMovies(_ query: String) {
         let apiKey: String = "3cad51d50ec5ff7b806eb0306fa1410b"
-        let str = "https://api.themoviedb.org/3/search/movie?api_key=\(apiKey)&query=love"
+        let str = "https://api.themoviedb.org/3/search/movie?api_key=\(apiKey)&query=\(query)"
         
         let url = URL(string: str)
         guard url != nil else {
