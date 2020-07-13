@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LuX-vr-V3y">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--movies-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ZexiLiu_Lab4" customModuleProvider="target" sceneMemberID="viewController">
@@ -21,7 +21,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="udF-40-wNH">
-                                <rect key="frame" x="0.0" y="100" width="414" height="762"/>
+                                <rect key="frame" x="0.0" y="100" width="414" height="713"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cdg-nJ-1en">
                                     <size key="itemSize" width="130" height="169"/>
@@ -72,7 +72,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="sdl-8J-hNu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8pH-55-VLY"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="udF-40-wNH" secondAttribute="bottom" id="O0B-Zj-S68"/>
+                            <constraint firstItem="udF-40-wNH" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Nwy-S9-f7E"/>
                             <constraint firstItem="udF-40-wNH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OOk-VJ-12u"/>
                             <constraint firstItem="udF-40-wNH" firstAttribute="top" secondItem="sdl-8J-hNu" secondAttribute="bottom" id="led-VR-8iO"/>
                             <constraint firstItem="sdl-8J-hNu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="smd-5m-MJ2"/>
@@ -81,13 +81,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="movies" image="play.rectangle" catalog="system" id="XJN-3A-Kjd" userLabel="Movies"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="moviesCollection" destination="udF-40-wNH" id="Hyv-Na-VKT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
+            <point key="canvasLocation" x="914" y="-197"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="4QU-av-dtt">
@@ -172,7 +174,57 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VKs-Ye-Pqz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="844.92753623188412" y="135.9375"/>
+            <point key="canvasLocation" x="1851" y="-198"/>
+        </scene>
+        <!--favotites-->
+        <scene sceneID="RtA-lj-Ouu">
+            <objects>
+                <viewController id="h0o-Gk-SI7" customClass="FavoriteViewController" customModule="ZexiLiu_Lab4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CZP-0C-TCj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hU7-ZH-Wp8">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hU7-ZH-Wp8" firstAttribute="leading" secondItem="Eyv-Do-nhb" secondAttribute="leading" id="9Hf-fy-k6t"/>
+                            <constraint firstItem="hU7-ZH-Wp8" firstAttribute="top" secondItem="Eyv-Do-nhb" secondAttribute="top" id="mhw-RV-hjQ"/>
+                            <constraint firstItem="Eyv-Do-nhb" firstAttribute="trailing" secondItem="hU7-ZH-Wp8" secondAttribute="trailing" id="pTC-e3-VOU"/>
+                            <constraint firstItem="Eyv-Do-nhb" firstAttribute="bottom" secondItem="hU7-ZH-Wp8" secondAttribute="bottom" id="yca-jd-dfd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Eyv-Do-nhb"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="favotites" image="star" catalog="system" id="KI0-RJ-8I5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RGa-6p-n4W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="913" y="559"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="WMD-y0-CgZ">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="LuX-vr-V3y" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xqo-W2-mhU">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="ky7-kK-2AZ"/>
+                        <segue destination="h0o-Gk-SI7" kind="relationship" relationship="viewControllers" id="3t4-wE-KD3"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lkP-vo-5Zk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="play.rectangle" catalog="system" width="64" height="46"/>
+        <image name="star" catalog="system" width="64" height="58"/>
+    </resources>
 </document>
