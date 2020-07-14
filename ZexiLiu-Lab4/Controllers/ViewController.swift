@@ -19,6 +19,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var model = Model()
     var movies = [Movie]()
     var images = [UIImage]()
+    let defaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
