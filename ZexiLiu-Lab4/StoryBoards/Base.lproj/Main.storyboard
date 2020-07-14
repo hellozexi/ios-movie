@@ -222,6 +222,10 @@
                         <viewLayoutGuide key="safeArea" id="60C-V2-g6R"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" image="magnifyingglass" catalog="system" id="2Qg-Go-VyV"/>
+                    <connections>
+                        <outlet property="switchBar" destination="64x-Tg-1kQ" id="Uh2-bP-olI"/>
+                        <outlet property="textField" destination="1Je-kD-dfA" id="nwn-4P-bkK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Wb-TV-5n7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="RaS-k5-NpH" userLabel="Exit" sceneMemberID="exit"/>
