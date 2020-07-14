@@ -69,5 +69,17 @@ class FavoriteViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let index = tableView.indexPathForSelectedRow {
+            let selectedMovie = favoriteMovies[index.row]
+            let detailVC = segue.destination as! WebViewController
+            detailVC.movie = selectedMovie
+        } else {
+            return
+        }
+        
+        
+        
+    }
     
 }

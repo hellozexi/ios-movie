@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82729DA524BE4CCD004236FA /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82729DA424BE4CCD004236FA /* WebViewController.swift */; };
+		82729DA724BE5714004236FA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82729DA624BE5714004236FA /* SettingsViewController.swift */; };
 		828FCFEA24B7CD4B000D80C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828FCFE924B7CD4B000D80C4 /* AppDelegate.swift */; };
 		828FCFEC24B7CD4B000D80C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828FCFEB24B7CD4B000D80C4 /* SceneDelegate.swift */; };
 		828FCFEE24B7CD4B000D80C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828FCFED24B7CD4B000D80C4 /* ViewController.swift */; };
@@ -43,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		82729DA424BE4CCD004236FA /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		82729DA624BE5714004236FA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		828FCFE624B7CD4B000D80C4 /* ZexiLiu-Lab4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ZexiLiu-Lab4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		828FCFE924B7CD4B000D80C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		828FCFEB24B7CD4B000D80C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -188,6 +192,8 @@
 				828FCFED24B7CD4B000D80C4 /* ViewController.swift */,
 				82BCB6A124BAB4C1002E765B /* DetailViewController.swift */,
 				82BCB6A324BCEDC5002E765B /* FavoriteViewController.swift */,
+				82729DA424BE4CCD004236FA /* WebViewController.swift */,
+				82729DA624BE5714004236FA /* SettingsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -330,8 +336,10 @@
 				828FCFEE24B7CD4B000D80C4 /* ViewController.swift in Sources */,
 				82BCB6A424BCEDC5002E765B /* FavoriteViewController.swift in Sources */,
 				828FD01E24B93E65000D80C4 /* Movie.swift in Sources */,
+				82729DA524BE4CCD004236FA /* WebViewController.swift in Sources */,
 				828FCFEA24B7CD4B000D80C4 /* AppDelegate.swift in Sources */,
 				828FCFEC24B7CD4B000D80C4 /* SceneDelegate.swift in Sources */,
+				82729DA724BE5714004236FA /* SettingsViewController.swift in Sources */,
 				828FD02024B93E7E000D80C4 /* APIResults.swift in Sources */,
 				828FD01A24B7CF3C000D80C4 /* Model.swift in Sources */,
 			);

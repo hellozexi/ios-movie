@@ -177,6 +177,57 @@
             </objects>
             <point key="canvasLocation" x="1851" y="-198"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="lmp-x5-jJU">
+            <objects>
+                <viewController id="4mB-Iw-UUS" customClass="SettingsViewController" customModule="ZexiLiu_Lab4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uFU-fB-ZIC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="64x-Tg-1kQ">
+                                <rect key="frame" x="234" y="235" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="adultBarChanged:" destination="RaS-k5-NpH" eventType="valueChanged" id="2Ke-ey-3rP"/>
+                                    <action selector="adultBarChanged:" destination="4mB-Iw-UUS" eventType="valueChanged" id="spb-19-E46"/>
+                                </connections>
+                            </switch>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Je-kD-dfA">
+                                <rect key="frame" x="209" y="467" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="numChanged:" destination="4mB-Iw-UUS" eventType="editingDidEnd" id="V89-6n-wQJ"/>
+                                    <action selector="textChanged:" destination="RaS-k5-NpH" eventType="editingDidEnd" id="sEX-db-LCo"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Adult" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TnW-In-A9H">
+                                <rect key="frame" x="85" y="235" width="40" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Num pre query" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKE-6f-wpR">
+                                <rect key="frame" x="48" y="474" width="114" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="60C-V2-g6R"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" image="magnifyingglass" catalog="system" id="2Qg-Go-VyV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Wb-TV-5n7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="RaS-k5-NpH" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="912" y="1305"/>
+        </scene>
         <!--favotites-->
         <scene sceneID="RtA-lj-Ouu">
             <objects>
@@ -222,6 +273,7 @@
                                         <connections>
                                             <outlet property="movieImage" destination="2MJ-Vz-pzW" id="Ka5-4X-6h3"/>
                                             <outlet property="movieTitle" destination="tol-Tr-7hR" id="RFD-mv-Gfa"/>
+                                            <segue destination="zV5-zu-OPr" kind="show" id="9hw-42-vSM"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -245,6 +297,47 @@
             </objects>
             <point key="canvasLocation" x="911.59420289855075" y="557.8125"/>
         </scene>
+        <!--Web View Controller-->
+        <scene sceneID="OzN-lm-VN5">
+            <objects>
+                <viewController id="zV5-zu-OPr" customClass="WebViewController" customModule="ZexiLiu_Lab4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n5a-Ii-5BQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zaN-5f-IdF">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="3XZ-nO-cYo">
+                                <rect key="frame" x="197" y="411" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="zaN-5f-IdF" firstAttribute="top" secondItem="KR1-O1-5tH" secondAttribute="top" id="Lpu-OM-GJK"/>
+                            <constraint firstItem="zaN-5f-IdF" firstAttribute="leading" secondItem="KR1-O1-5tH" secondAttribute="leading" id="Sbu-N7-C8l"/>
+                            <constraint firstItem="3XZ-nO-cYo" firstAttribute="centerY" secondItem="n5a-Ii-5BQ" secondAttribute="centerY" id="ZW2-9S-Wgs"/>
+                            <constraint firstItem="KR1-O1-5tH" firstAttribute="bottom" secondItem="zaN-5f-IdF" secondAttribute="bottom" id="d6C-9m-koJ"/>
+                            <constraint firstItem="KR1-O1-5tH" firstAttribute="trailing" secondItem="zaN-5f-IdF" secondAttribute="trailing" id="dcV-CM-U4N"/>
+                            <constraint firstItem="3XZ-nO-cYo" firstAttribute="centerX" secondItem="n5a-Ii-5BQ" secondAttribute="centerX" id="gOl-WR-rY2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KR1-O1-5tH"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Dse-HU-t59"/>
+                    <connections>
+                        <outlet property="theSpinner" destination="3XZ-nO-cYo" id="g3y-CV-LQ8"/>
+                        <outlet property="theWebView" destination="zaN-5f-IdF" id="Nje-53-z6K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5PQ-Hg-S0n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1866.6666666666667" y="558.48214285714278"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="WMD-y0-CgZ">
             <objects>
@@ -258,6 +351,7 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="ky7-kK-2AZ"/>
                         <segue destination="h0o-Gk-SI7" kind="relationship" relationship="viewControllers" id="3t4-wE-KD3"/>
+                        <segue destination="4mB-Iw-UUS" kind="relationship" relationship="viewControllers" id="WYY-bK-gGm"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lkP-vo-5Zk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -266,6 +360,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="magnifyingglass" catalog="system" width="64" height="56"/>
         <image name="play.rectangle" catalog="system" width="64" height="46"/>
         <image name="star" catalog="system" width="64" height="58"/>
     </resources>

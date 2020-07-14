@@ -77,6 +77,7 @@ class DetailViewController: UIViewController {
     
     
     
+    
     @IBAction func favoriteBtnClicked(_ sender: Any) {
         var favoriteMovies = [Movie]()
         if let data = UserDefaults.standard.value(forKey:"favorites") as? Data {
