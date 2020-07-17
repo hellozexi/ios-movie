@@ -47,6 +47,15 @@
 /* Begin PBXFileReference section */
 		82729DA424BE4CCD004236FA /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		82729DA624BE5714004236FA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		82729DBD24C1254C004236FA /* Movie@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Movie@3x.png"; sourceTree = "<group>"; };
+		82729DBE24C1254C004236FA /* Movie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Movie.png; sourceTree = "<group>"; };
+		82729DBF24C1254C004236FA /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		82729DC024C1254C004236FA /* Movie@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Movie@2x.png"; sourceTree = "<group>"; };
+		82729DC124C1254C004236FA /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
+		82729DC224C1254C004236FA /* heart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart@2x.png"; sourceTree = "<group>"; };
+		82729DC324C1254C004236FA /* heart@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart@3x.png"; sourceTree = "<group>"; };
+		82729DC424C1254C004236FA /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@2x.png"; sourceTree = "<group>"; };
+		82729DC524C1254C004236FA /* settings@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@3x.png"; sourceTree = "<group>"; };
 		828FCFE624B7CD4B000D80C4 /* ZexiLiu-Lab4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ZexiLiu-Lab4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		828FCFE924B7CD4B000D80C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		828FCFEB24B7CD4B000D80C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +105,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		82729DBC24C1254C004236FA /* lab4logos */ = {
+			isa = PBXGroup;
+			children = (
+				82729DBD24C1254C004236FA /* Movie@3x.png */,
+				82729DBE24C1254C004236FA /* Movie.png */,
+				82729DBF24C1254C004236FA /* settings.png */,
+				82729DC024C1254C004236FA /* Movie@2x.png */,
+				82729DC124C1254C004236FA /* heart.png */,
+				82729DC224C1254C004236FA /* heart@2x.png */,
+				82729DC324C1254C004236FA /* heart@3x.png */,
+				82729DC424C1254C004236FA /* settings@2x.png */,
+				82729DC524C1254C004236FA /* settings@3x.png */,
+			);
+			path = lab4logos;
+			sourceTree = "<group>";
+		};
 		828FCFDD24B7CD4B000D80C4 = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +146,7 @@
 			children = (
 				828FD02624BA770D000D80C4 /* Controllers */,
 				828FD02524BA76D2000D80C4 /* Utils */,
+				82729DBC24C1254C004236FA /* lab4logos */,
 				828FD02424BA76C3000D80C4 /* StoryBoards */,
 				828FD02324BA76B4000D80C4 /* Models */,
 				828FD02224BA76A1000D80C4 /* Views */,

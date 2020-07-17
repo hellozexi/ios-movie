@@ -10,8 +10,6 @@ import Foundation
 import UIKit
 class MovieViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var posterImage: UIImageView!
-    @IBOutlet weak var titel: UILabel!
     var movie: Movie?
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,12 +20,20 @@ class MovieViewCell: UICollectionViewCell {
 //    }
     
     func setMovie(_ movie: Movie) {
-        
+        let label = UILabel()
+        let labelSize: CGFloat = 40
+        let labelFrame = CGRect(x: 0, y: self.frame.height - labelSize, width: self.frame.width, height: labelSize)
+        label.frame = labelFrame
+        label.textColor = UIColor.white
+        label.textAlignment = NSTextAlignment.center
+        label.numberOfLines = 0
+        label.font = UIFont.systemFont(ofSize: 13.0)
         self.movie = movie
         guard self.movie != nil else {
             return
         }
-        self.titel.text = movie.title
+        label.text = movie.title
+        self.addSubview(label)
 //        guard let imagePath = movie.poster_path else { return  }
 //        let imageFullPath = self.getImgPath(imagePath)
 //        guard let imageUrl = URL(string: imageFullPath) else { return  }
@@ -38,7 +44,11 @@ class MovieViewCell: UICollectionViewCell {
     }
     
     func setImage(_ image: UIImage) {
-        self.posterImage.image = image
+        let imageFrame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
+        let imageView = UIImageView()
+        imageView.frame = imageFrame
+        imageView.image = image
+        self.addSubview(imageView)
     }
     
 }

@@ -12,7 +12,7 @@ class WebViewController: UIViewController, WKNavigationDelegate {
 
     
     @IBOutlet weak var theWebView: WKWebView!
-    @IBOutlet weak var theSpinner: UIActivityIndicatorView!
+    //@IBOutlet weak var theSpinner: UIActivityIndicatorView!
     var myURLRequest: URLRequest?
     var movie: Movie?
     override func viewDidLoad() {
@@ -27,18 +27,18 @@ class WebViewController: UIViewController, WKNavigationDelegate {
         let url = URL(string: finalURL)!
         let myURLRequest = URLRequest(url: url)
         theWebView.load(myURLRequest)
-        theSpinner.stopAnimating()
+        //theSpinner.stopAnimating()
     }
     
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         
-        theSpinner.startAnimating()
+        //theSpinner.startAnimating()
     }
     
     func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
         
-        theSpinner.stopAnimating()
-        theSpinner.isHidden = true
+        //theSpinner.stopAnimating()
+        //theSpinner.isHidden = true
     }
     
     override func didReceiveMemoryWarning() {

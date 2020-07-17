@@ -33,10 +33,6 @@ class DetailViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        titleLabel.text = ""
-        releaseDateLabel.text = ""
-        voteAvgLabel.text = ""
-        overviewText.text = ""
         
         
         guard movie != nil else {
