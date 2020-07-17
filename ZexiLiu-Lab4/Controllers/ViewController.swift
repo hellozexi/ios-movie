@@ -39,17 +39,17 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.cellPerRow
+        return self.images.count
        }
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        if(movies.count % cellPerRow == 0) {
-            return self.movies.count/cellPerRow
-        } else {
-            return self.movies.count/cellPerRow + 1
-        }
-        
-    }
+//    func numberOfSections(in collectionView: UICollectionView) -> Int {
+//        if(movies.count % cellPerRow == 0) {
+//            return self.movies.count/cellPerRow
+//        } else {
+//            return self.movies.count/cellPerRow + 1
+//        }
+//        
+//    }
     func setUpLayoutForCollectionView() {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         let width = UIScreen.main.bounds.width/CGFloat(cellPerRow)-10

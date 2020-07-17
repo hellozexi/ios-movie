@@ -40,8 +40,8 @@ class DetailViewController: UIViewController {
         }
         
         titleLabel.text = movie?.title
-        releaseDateLabel.text = movie?.release_date
-        voteAvgLabel.text = String(format: "%f", movie!.vote_average)
+        releaseDateLabel.text = "Release Date: " + movie!.release_date
+        voteAvgLabel.text = String(format: "Average Vote: %.1f", movie!.vote_average)
         if let imagePath = movie?.poster_path {
             let imageFullPath = model.getImgPath(imagePath)
             guard let imageUrl = URL(string: imageFullPath) else { return }

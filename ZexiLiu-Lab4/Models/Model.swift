@@ -27,6 +27,9 @@ class Model {
     func getMovies(_ query: String) {
         let cleanedQuery = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         numPerQuery = defaults.integer(forKey: "numPerQuery")
+        if(numPerQuery == 0) {
+            numPerQuery = 20
+        }
         adultEnabled = defaults.bool(forKey: "isAdult")
         let apiKey: String = "3cad51d50ec5ff7b806eb0306fa1410b"
         let str = adultEnabled ? "https://api.themoviedb.org/3/search/movie?api_key=\(apiKey)&query=\(cleanedQuery!)&include_adult=true" : "https://api.themoviedb.org/3/search/movie?api_key=\(apiKey)&query=\(cleanedQuery!)&include_adult=false"
