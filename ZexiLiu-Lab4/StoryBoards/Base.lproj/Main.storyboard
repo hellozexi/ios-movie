@@ -302,7 +302,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zaN-5f-IdF">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="40" width="414" height="768"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -312,7 +312,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="zaN-5f-IdF" firstAttribute="top" secondItem="KR1-O1-5tH" secondAttribute="top" id="Lpu-OM-GJK"/>
+                            <constraint firstItem="zaN-5f-IdF" firstAttribute="top" secondItem="KR1-O1-5tH" secondAttribute="top" constant="40" id="Lpu-OM-GJK"/>
                             <constraint firstItem="zaN-5f-IdF" firstAttribute="leading" secondItem="KR1-O1-5tH" secondAttribute="leading" id="Sbu-N7-C8l"/>
                             <constraint firstItem="KR1-O1-5tH" firstAttribute="bottom" secondItem="zaN-5f-IdF" secondAttribute="bottom" id="d6C-9m-koJ"/>
                             <constraint firstItem="KR1-O1-5tH" firstAttribute="trailing" secondItem="zaN-5f-IdF" secondAttribute="trailing" id="dcV-CM-U4N"/>
